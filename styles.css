@@ -53,7 +53,7 @@ nav a {
 }
 
 .hero {
-  color: rgba(0, 0, 0, 0.9); /* Cor preta com leve transparência */
+  color: rgba(0 0, 0, 0.9); /* Cor preta com leve transparência */
   text-align: center;
   background-image: url('assets/banner.jpeg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho da sua imagem */
   background-size: cover; /* Para cobrir todo o conteúdo da seção */
@@ -96,7 +96,7 @@ nav a {
   display: flex;
   justify-content: space-between;
   padding: 0px 8.33%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
   column-gap: 20px;
 }
 
@@ -122,6 +122,30 @@ nav a {
   margin-left: 8px;
   font-weight: 600;
 }
+
+.hero-right-content{
+  text-align: left;
+  max-width: 700px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+ a {
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: 16px;
+ }
+
+ h4 {
+  margin-bottom: 0px;
+  color: blue;
+ }
+}
+
+.hero-right-content > p {
+  margin-left: 8px;
+  font-weight: 600;
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -149,8 +173,18 @@ nav a {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
+    border-radius: 4px;
   }
 
+  .hero-right-content {
+    row-gap: 8px;
+  }
+
+  .hero-right-content > p {
+  display: none;
+  
+  }
   .hero-left-content > p {
   display: none;
   }
@@ -263,6 +297,9 @@ nav a {
   padding: 80px 8.33%;
   text-align: center;
 
+  h2 {
+    color: blue;
+  }
 }
 
 .about-us-content {
@@ -281,6 +318,7 @@ nav a {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  font-weight: 500;
   @media (max-width: 768px) {
     padding-top: 20px;  
     padding-bottom: 40px;  
@@ -401,10 +439,12 @@ nav a {
     margin-bottom: 10px;
     font-size: 16px;
     line-height: 1.5;
+    font-weight: 500;
   }
 
   .contact-info-details strong {
     font-weight: bold;
+    color: blue;
   }
 
   .testimonials {
@@ -413,6 +453,10 @@ nav a {
     padding: 80px 20px;
     text-align: center;
     width: 45%;
+    box-sizing: border-box;
+    h2 {
+      color: blue;
+    }
   }
 
   .testimonials-content {
@@ -438,7 +482,7 @@ nav a {
 
   .testimonial span {
     font-weight: bold;
-    color: #333;
+    color: blue;
   }
 
   @media screen and (max-width: 768px) {
