@@ -351,10 +351,6 @@ nav a {
   min-width: 200px;
 }
 
-.leaflet-control > a:first-child{
-  display: none;
-}
-
 .about-us-text {
   padding: 0px 20px;
   max-width: 600px;
