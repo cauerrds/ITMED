@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <title>ITMED</title>
 </head>
 <body>
@@ -31,8 +32,8 @@
 <section id="home" class="hero">
   <div class="hero-content">
     <div class="hero-left-content">
-      <h1 class="hero-title">Consultoria Financeira Hospitalar</h1>
-      <p class="hero-text">Consultoria financeira hospitalar otimiza a gestão financeira, identifica oportunidades de economia e eficiência, e proporciona redução de custos, aumento de receita e sustentabilidade.</p>
+      <h1 class="hero-title">Consultoria Financeira Médica</h1>
+      <p class="hero-text">Consultoria financeira Médica otimiza a gestão financeira, identifica oportunidades de economia e eficiência, e proporciona redução de custos, aumento de receita e sustentabilidade.</p>
       <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" class="whatsapp-btn">Contato via WhatsApp</a>
     </div>
     <div class="hero-right-content">
@@ -44,6 +45,10 @@
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaa</p>
     </div>
   </div>
+  <video autoplay muted id="background-video">
+    <source src="assets/hero.mp4" type="video/mp4">
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
 </section>
 
 <section id="servicos" class="services">
@@ -51,6 +56,7 @@
     <h2>Nossos Serviços</h2>
     <div class="service-table">
       <div class="service">
+        <!-- <div class="boxAsBorder"></div> -->
         <!-- <div class="service-icon" style="background-color: #8CC84B;"></div> -->
         <h3>Redução Tributária</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaaLorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti.</p>
@@ -134,12 +140,37 @@
 <section id="sobre-nos" class="about-us">
   <div class="about-us-content desktop-view">
     <div class="about-us-text">
-      <h2>Quem Somos</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaaLorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti.
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaaLorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaa</p>
+      <h1>Quem Somos</h1>
+      <h2>Especialistas em Soluções Financeiras para o Setor de Saúde</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaaLorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaaLorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in incidunt neque corrupti. Aliquid dolor minima pariatur vitaes vitaesaa
+      </p>
       <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" class="whatsapp-btn">Contato via WhatsApp</a>
     </div>
-    <img class="about-us-image" src="./assets/about-us.jpg" alt="Desentupidora XYZ">
+    <!-- <img class="about-us-image" src="./assets/about-us.jpg" alt="Desentupidora XYZ"> -->
+    <div >
+      <h1>Nosso Local</h1>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      <script>
+          var lat = -23.6236;
+          var lng = -46.5706;
+
+          var map = L.map('map').setView([lat, lng], 16);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '<a href="https://www.google.com/maps/place/Condom%C3%ADnio+Edif%C3%ADcio+Executive+Center/@-23.615352,-46.5691867,15z/data=!4m6!3m5!1s0x94ce5cec1d0e92a3:0x4ce8846f58e9a2d9!8m2!3d-23.615352!4d-46.5691867!16s%2Fg%2F1v5_bkkq?entry=ttu">Ver Rotas</a>'
+          }).addTo(map);
+
+          // Adiciona um marcador no mapa
+          var marker = L.marker([lat, lng]).addTo(map)
+              .bindPopup('Rua Amazonas, São Caetano do Sul, Edifício Executive Center, 521')
+              .openPopup();
+      </script>
+    </div>
   </div>
 </section>
 
@@ -164,7 +195,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in 
         <p>"A equipe da ITMed resolveu meu problema de forma rápida e profissional. Recomendo!"</p>
         <span>- Cliente Satisfeito</span>
       </div>
-      <div class="testimonial">
+      <!-- <div class="testimonial">
         <p>"Serviço excepcional! Profissionais competentes e preço justo. Voltarei a contratar quando necessário."</p>
         <span>- Cliente Feliz</span>
       </div>
@@ -175,7 +206,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laudantium in 
       <div class="testimonial">
         <p>"Atendimento impecável. Resolveram meu problema no mesmo dia. Equipe altamente recomendada."</p>
         <span>- Cliente Agradecido</span>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
