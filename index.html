@@ -149,15 +149,15 @@
       <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" class="whatsapp-btn">Contato via WhatsApp</a>
     </div>
     <!-- <img class="about-us-image" src="./assets/about-us.jpg" alt="Desentupidora XYZ"> -->
-    <div >
+    <div class="about-map">
       <h1>Nosso Local</h1>
       <div class="map-container">
         <div id="map"></div>
       </div>
       <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
       <script>
-          var lat = -23.6236;
-          var lng = -46.5706;
+          var lat = -23.61538535;
+          var lng = -46.5691798;
 
           var map = L.map('map').setView([lat, lng], 16);
 
@@ -167,7 +167,7 @@
 
           // Adiciona um marcador no mapa
           var marker = L.marker([lat, lng]).addTo(map)
-              .bindPopup('Rua Amazonas, São Caetano do Sul, Edifício Executive Center, 521')
+              .bindPopup('Condomínio Edifício Executive Center, R. Amazonas, 521 - Centro, São Caetano do Sul - SP, 09520-070')
               .openPopup();
       </script>
     </div>
@@ -175,18 +175,14 @@
 </section>
 
 
-
 <section id="depoimentos-contato" class="testimonials-contact">
   <div class="contact-info">
     <div class="contact-details">
-      <img src="assets/logo.png" alt="Logo" >
-      <div class="contact-info-details">
-        <p><strong>Endereço:</strong> Endereço da sua empresa</p>
-        <p><strong>WhatsApp:</strong> (XX) XXXX-XXXX</p>
-        <p><strong>Sócios:</strong> Nome dos sócios</p>
-        <p><strong>Email:</strong> seuemail@exemplo.com</p>
-      </div>
+      <!-- <img src="assets/logo.png" alt="Logo" > -->
+      <img class="about-us-image" src="./assets/build.jpg" alt="Desentupidora XYZ">
+      
     </div>
+  
   </div>
   <div class="testimonials">
     <h2>Depoimentos</h2>
@@ -195,27 +191,41 @@
         <p>"A equipe da ITMed resolveu meu problema de forma rápida e profissional. Recomendo!"</p>
         <span>- Cliente Satisfeito</span>
       </div>
-      <!-- <div class="testimonial">
+      <div class="testimonial">
         <p>"Serviço excepcional! Profissionais competentes e preço justo. Voltarei a contratar quando necessário."</p>
         <span>- Cliente Feliz</span>
       </div>
-      <div class="testimonial">
+      <!-- <div class="testimonial testimonialOff">
         <p>"Rápidos, eficientes e muito profissionais. Estou extremamente satisfeito com o serviço prestado."</p>
         <span>- Cliente Contente</span>
-      </div>
-      <div class="testimonial">
+      </div> -->
+      <!-- <div class="testimonial">
         <p>"Atendimento impecável. Resolveram meu problema no mesmo dia. Equipe altamente recomendada."</p>
         <span>- Cliente Agradecido</span>
-      </div> -->
+      </div>  -->
     </div>
-  </div>
+  
 </section>
+
 
 <!-- ... (seções futuras) -->
 
 <footer>
+
+  <div class="contact-info-details">
+    <p><strong>Endereço:</strong> Condomínio Edifício Executive Center, R. Amazonas, 521 - Centro, São Caetano do Sul - SP, 09520-070</p>
+    <p><strong>WhatsApp:</strong> (XX) XXXX-XXXX</p>
+    <p><strong>Sócios:</strong> Vitor</p>
+    <p><strong>Email:</strong> vitor@mail.com</p>
+  </div>
+
+
+
+</div>
+  
   <div class="footer-content">
-    <p>&copy; 2024 ITMED. Todos os direitos reservados.</p>
+
+    
     <div class="social-icons">
       <a href="https://www.facebook.com/SEULINK" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
       <a href="https://www.instagram.com/SEULINK" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
@@ -225,7 +235,10 @@
       <!-- Adicione mais ícones de redes sociais conforme necessário -->
     </div>
   </div>
+
 </footer>
+<p class="copy">&copy; 2024 ITMED. Todos os direitos reservados.</p>
+
 
 <!-- Restante do seu código -->
 

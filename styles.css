@@ -45,7 +45,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: #0059b3;
   margin: 0 15px;
 }
 
@@ -218,13 +218,28 @@ nav a {
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
+    
+     
+  }
+  .steps-content{
+    max-width: 600px;
+    margin: 0 auto;
+    background:
+    linear-gradient(to right, #0059b3 6px, transparent 6px) 0 0,
+    linear-gradient(to left, #0059b3 6px, transparent 6px) 100% 100%,
+    linear-gradient(to bottom, #0059b3 6px, transparent 6px) 0 0,
+    linear-gradient(to top, #0059b3 6px, transparent 6px) 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    background-size: 30px 30px; 
+    background-color: #fff;
   }
   .steps-text {
     max-width: 800px;
     margin: 0 auto;
   }
   .steps h2 {
-    color: #333;
+    color: #0059b3;
     font-size: 28px;
     margin-bottom: 20px;
   }
@@ -234,11 +249,14 @@ nav a {
     margin-bottom: 30px;
   }
   .steps ol {
+    margin: 0 auto;
     margin-top: 68px;
     list-style: none;
     padding-left: 0;
     display: flex;
     flex-direction: column;
+    max-width: fit-content;
+    align-items: start;
     gap: 16px;
   }
   .steps ol li {
@@ -247,7 +265,7 @@ nav a {
     color: #555;
   }
   .steps ol li strong {
-    color: #007bff;
+    color: #0059b3;
   }
   .whatsapp-btn {
     background-color: #25d366;
@@ -315,13 +333,13 @@ nav a {
 
 
 .about-us {
-  background-color: #fcfafa; /* Cor de fundo da seção Sobre Nós */
+  background-color: #fff; /* Cor de fundo da seção Sobre Nós */
   padding: 80px 8.33%;
   text-align: center;
   background:
-  linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-  linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-  var(--dot-color);
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);  
   h1{
     color: #0059b3;
     font-size: 32px;
@@ -351,6 +369,10 @@ nav a {
   min-width: 200px;
 }
 
+.map-link:hover{
+  cursor: pointer
+}
+
 .about-us-text {
   padding: 0px 20px;
   max-width: 600px;
@@ -358,11 +380,11 @@ nav a {
   flex-direction: column;
   row-gap: 32px;
   font-weight: 500;
-  background:
+  /* background:
   linear-gradient(to right, #0059b3 6px, transparent 6px) 0 0,
   linear-gradient(to left, #0059b3 6px, transparent 6px) 100% 100%,
   linear-gradient(to bottom, #0059b3 6px, transparent 6px) 0 0,
-  linear-gradient(to top, #0059b3 6px, transparent 6px) 100% 100%;
+  linear-gradient(to top, #0059b3 6px, transparent 6px) 100% 100%; */
   background-repeat: no-repeat;
   background-size: 30px 30px;  
   border-radius: 8px;
@@ -375,10 +397,24 @@ nav a {
   }
 }
 
+.about-map{
+  /* background:
+  linear-gradient(to right, #0059b3 6px, transparent 6px) 0 0,
+  linear-gradient(to left, #0059b3 6px, transparent 6px) 100% 100%,
+  linear-gradient(to bottom, #0059b3 6px, transparent 6px) 0 0,
+  linear-gradient(to top, #0059b3 6px, transparent 6px) 100% 100%; */
+
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
 .about-us-image {
   flex: 1;
   height: 400px; /* Altura da imagem em desktop */
   width: 100%;
+  max-width: 400px;
   background-size: cover;
   border-radius: 4px;
   @media (max-width: 768px) {
@@ -386,18 +422,10 @@ nav a {
   }   
 }
 
-.map-container{
+/* .map-container{
   padding: 12px;
-  background:
-  linear-gradient(to right, #0059b3 6px, transparent 6px) 0 0,
-  linear-gradient(to left, #0059b3 6px, transparent 6px) 100% 100%,
-  linear-gradient(to bottom, #0059b3 6px, transparent 6px) 0 0,
-  linear-gradient(to top, #0059b3 6px, transparent 6px) 100% 100%;
-
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  border-radius: 8px;
-}
+  
+} */
 
 
 #map {
@@ -500,35 +528,54 @@ nav a {
 
   .testimonials-contact {
     display: grid;
+    
     grid-template-columns: 1fr 1fr;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #fff;
     background:
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
+		var(--dot-color);  
+    
   }
 
   .contact-info {
     width: 100%;
+    display: flex;
+    align-items: center;
+    
+    
   }
 
   .contact-details {
-    max-width: 400px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .contact-details img {
-    max-width: 100%;
-    margin-bottom: 20px;
+    
+    margin: auto 10px;
+    border-radius: 8px;
+    /* margin-bottom: 20px; */
   }
+
+  .contact-info-details{
+    margin: auto 10px;
+    max-width: 400px;
+    text-align: left;
+
+  }
+  
 
   .contact-info-details p {
     margin-bottom: 10px;
@@ -544,28 +591,32 @@ nav a {
 
   .testimonials {
     height: 100%;
-    background-color: #4497D3;
-    padding: 80px 20px;
+    /* background-color: #4497D3; */
+    /* padding: 80px 20px; */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
     width: 100%;
     box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+    
+    
     h2 {
       color: #0059b3;
+      font-size: 32px;
     }
+    
   }
 
-  .testimonials-content {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+  
 
   .testimonial {
-    width: 45%;
-    margin: 15px;
+    /* width: 45%; */
+    /* margin: 15px; */
     box-sizing: border-box;
+    
   }
 
   .testimonial p {
@@ -580,43 +631,74 @@ nav a {
     color: #0059b3;
   }
 
+  @media screen and (max-width: 600px) {
+    
+
+    .testimonialOff {
+      display: none;
+    }
+
+    
+
+
+    
+    
+  }
+
   @media screen and (max-width: 768px) {
     .contact-info,
     .testimonials {
       width: 100%;
     }
 
-    .testimonial {
-      width: 100%;
-      max-width: 100vw;
-      box-sizing: border-box;
+    .testimonials-contact{
+      grid-template-columns: 2fr;
     }
 
-    .testimonials-contact {
-      grid-template-columns: 1fr;
-    }
+   
   }
 
 /* Adicione as seguintes regras de estilo para os novos ícones de redes sociais */
 
 footer {
-  background-color: #fcfafa;
+  background-color: #fff;
   color: #000;
-  padding: 20px 0;
+  padding: 20px 8.33%;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: 768px) {
+    grid-template-columns: 2fr;
+
+ 
+  }
+  
 }
 
-.footer-content {
+
+
+/* .footer-content {
   max-width: 800px;
   margin: 0 auto;
-}
+} */
 
 .footer p {
   font-size: 14px;
+  
 }
 
 .social-icons {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  text-align: left;
+  @media (max-width: 600px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
 
 .social-icons a {
@@ -633,6 +715,11 @@ footer {
 
 .social-icons a:hover img {
   transform: scale(1.2);
+}
+
+.copy{
+  text-align: center;
+  margin: 8px auto;
 }
 
 /* Adicione estilos adicionais conforme necessário */
